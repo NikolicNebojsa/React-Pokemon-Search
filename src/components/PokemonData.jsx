@@ -41,12 +41,14 @@ const PokemonData = ({ pokemonData }) => {
           </div>
           <div className="type-info element">
             <h3>Type</h3>
-            {pokemonData.types.map((item, index) => (
-              <span className={`${item.type.name}`} key={index}>
-                {item.type.name}
-                <br />
-              </span>
-            ))}
+            <div className="pokemon-types">
+              {pokemonData.types.map((item, index) => (
+                <span className={`${item.type.name} type-button`} key={index}>
+                  {item.type.name}
+                  <br />
+                </span>
+              ))}
+            </div>
           </div>
         </div>
         <div className="stats-info element">

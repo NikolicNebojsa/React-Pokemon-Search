@@ -8,7 +8,8 @@
   align-items: center;
   text-transform: capitalize;
   color: white;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   font-size: 1.5em;
   gap: 20px;
   > :first-child {
@@ -40,4 +41,65 @@
 .held-items-info,
 .type-info element {
   margin-bottom: 30px;
+}
+.pokemon-types {
+  display: flex;
+  gap: 30px;
+}
+.type-button {
+  padding: 5px 10px;
+  border-radius: 15px;
+  width: 50%;
+}
+.grass {
+  background: green;
+}
+.poison {
+  background: purple;
+}
+.fire {
+  background: tomato;
+}
+.water {
+  background: royalblue;
+}
+.flying {
+  background: lightblue;
+}
+.fighting {
+  background: red;
+}
+.fairy {
+  background: pink;
+}
+
+.electric {
+  background: yellow;
+}
+.dragon {
+  background: blue;
+}
+.steel {
+  background: grey;
+}
+.psyhic {
+  background: magenta;
+}
+.ghost {
+  background: orchid;
+}
+.normal {
+  background: beige;
+}
+.ice {
+  background: powderblue;
+}
+.ground {
+  background: sandybrown;
+}
+.dark {
+  background: black;
+}
+.bug {
+  background: yellowgreen;
 }

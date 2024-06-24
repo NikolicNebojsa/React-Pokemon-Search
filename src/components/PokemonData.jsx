@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./PokemonData.css";
 
 const PokemonData = ({ pokemonData }) => {
   if (!pokemonData) {
     return <div>Loading...</div>;
   }
-  const [pokemonName, setPokemonName] = useState("");
-
-  // const handlePokemonName = () => {
-  //   setPokemonName(pokemonData.name);
-  // };
-
-  // useEffect(() => {
-  //   setPokemonName(pokemonData.name);
-  //   Math.floor(pokemonData.name.length / 2);
-  // }, [pokemonData]);
-
   return (
     <>
       <div className="pokemon-info">
@@ -58,14 +47,14 @@ const PokemonData = ({ pokemonData }) => {
           <h3>Stats</h3>
           <ul>
             {pokemonData.stats.map((item, index) => (
-              <>
+              <div key={index}>
                 {" "}
-                <li key={index}>
+                <li>
                   {item.stat.name.replace(/[^a-zA-Z0-9 ]/g, " ")}:{" "}
                   {item.base_stat}
                 </li>
                 <meter value={item.base_stat} min={0} max={255}></meter>
-              </>
+              </div>
             ))}
           </ul>
         </div>

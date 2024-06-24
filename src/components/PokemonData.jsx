@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./PokemonData.css";
 
 const PokemonData = ({ pokemonData }) => {
@@ -60,7 +60,7 @@ const PokemonData = ({ pokemonData }) => {
             {pokemonData.stats.map((item, index) => (
               <>
                 {" "}
-                <li>
+                <li key={index}>
                   {item.stat.name.replace(/[^a-zA-Z0-9 ]/g, " ")}:{" "}
                   {item.base_stat}
                 </li>

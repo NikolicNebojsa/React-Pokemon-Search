@@ -19,7 +19,7 @@ const App = () => {
   // asinhrona funkcija koja ce pozvati API sa inputom vracenim iz SearchBar
   async function searchPokemon() {
     // API URL izmenjen imenom pokemona koji se pretrazuje
-    const API_URL = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+    const API_URL = `https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`;
     try {
       const response = await fetch(API_URL);
       if (!response.ok) {

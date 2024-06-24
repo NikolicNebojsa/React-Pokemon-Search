@@ -18,10 +18,12 @@ const SearchBar = ({ search }) => {
       <input
         value={inputValue}
         type="text"
-        placeholder="Search for pokemon here"
+        placeholder="Type pokemon name in here"
         onChange={handleChange}
       />
-      <button onClick={handleClick}>Dugmence</button>
+      <button onClick={handleClick}>
+        <div className="dot"></div>
+      </button>
     </div>
   );
 };

@@ -1,0 +1,32 @@
+.electric {
+  background-color: yellow;
+}
+.pokemon-info {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 50px 300px;
+  text-align: center;
+  align-items: center;
+  > :first-child {
+    grid-column: 1 / -1;
+  }
+  * {
+    flex-grow: 1;
+    list-style-type: none;
+  }
+  > .pokemon-name {
+    height: 30px;
+  }
+  .pokemon-img,
+  .ability-info,
+  .held-items-info,
+  .type-info,
+  .stats-info {
+    grid-row-start: 2;
+  }
+}
+.pokemon-img {
+  img {
+    width: 250px;
+  }
+}
